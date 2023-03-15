@@ -1,0 +1,21 @@
+<body>
+    <section class="vh-100" style="background-color:black;  ">
+      <div class="container p-5">
+          <div class="row">
+            <div class="col mb-5" *ngFor="let data of myData">
+              <div class="card" style="width: 18rem;height:32rem">
+                  <img src="../../../assets/{{data.img1}}" class="card-img-top" alt="..." height="300" width="230">
+                  <div class="card-body">
+                    <h5 class="card-title">{{data.name}}</h5>
+                    <!-- <p class="card-text"style="width: 18rem;">{{data.detail}}</p> -->
+                    
+                    <p>{{data.detail}}</p>
+                    <button class="btn bg-primary">{{data.price}}</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn bg-primary"><h5 class="card-title">click here</h5></button>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </section>
+          </body>

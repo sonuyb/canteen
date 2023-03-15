@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "canteen-53ab1": {
+      "hosting": {
+        "canteen": [
+          "canteen-53ab1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "canteen-53ab1"
+  }
+}
