@@ -19,21 +19,19 @@ import { LunchpageComponent } from './pages/lunchpage/lunchpage.component';
 import { BiscuitspageComponent } from './pages/biscuitspage/biscuitspage.component';
 import { BeveragespageComponent } from './pages/beveragespage/beveragespage.component';
 import { PasterypageComponent } from './pages/pasterypage/pasterypage.component';
-import { SinglebeveragespageComponent } from './pages/singlebeveragespage/singlebeveragespage.component';
-import { SinglebiscuitspageComponent } from './pages/singlebiscuitspage/singlebiscuitspage.component';
-import { SinglecondinentalpageComponent } from './pages/singlecondinentalpage/singlecondinentalpage.component';
-import { SinglepasterypageComponent } from './pages/singlepasterypage/singlepasterypage.component';
-import { SnacksComponent } from './pages/snacks/snacks.component';
+
 import { IcecreamspageComponent } from './pages/icecreamspage/icecreamspage.component';
 import { SnackspageComponent } from './pages/snackspage/snackspage.component';
-import { SinglesnackpageComponent } from './pages/singlesnackpage/singlesnackpage.component';
-import { SingleicecreamspageComponent } from './pages/singleicecreamspage/singleicecreamspage.component';
+import { FormsModule } from '@angular/forms';
 import { ReviewComponent } from './pages/review/review.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { CartComponent } from './pages/cart/cart.component';
+import { PaymentComponent } from './pages/payment/payment.component';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 
 @NgModule({
@@ -54,27 +52,30 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
      BiscuitspageComponent,
      BeveragespageComponent,
      PasterypageComponent,
-     SinglebeveragespageComponent,
-     SinglebiscuitspageComponent,
-     SinglecondinentalpageComponent,
-     SinglepasterypageComponent,
-     SnacksComponent,
+    
      IcecreamspageComponent,
      SnackspageComponent,
-     SinglesnackpageComponent,
-     SingleicecreamspageComponent,
+    
      ReviewComponent,
+     CartComponent,
+     PaymentComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+    {
+      provide: FIREBASE_OPTIONS,useValue:environment.firebase 
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

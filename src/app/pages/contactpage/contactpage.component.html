@@ -1,4 +1,4 @@
-
+<div>
 <div class="" style="background: rgb(38, 38, 38);background-image: url('../../../assets/images/contact1.jfif'); background-size: cover; background-position: center center;">
  
 
@@ -23,24 +23,24 @@
                   <!-- Name -->
                   <div class="md-form md-outline mt-0">
                     <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control">
+                    <input type="text" name="name" [(ngModel)]="name" class="form-control">
                    
                   </div>
                   <!-- Email -->
                   <div class="md-form md-outline">
                     <label for="email">Email Address</label>
-                    <input type="text" id="email" class="form-control">
+                    <input type="text" name="email" [(ngModel)]="email" class="form-control">
                     
                     
                   </div>
                   <!-- Message -->
                   <div class="md-form md-outline">
                     <label for="message">Comment</label>
-                    <textarea id="message" class="md-textarea form-control" rows="3"></textarea>
+                    <textarea name="message" [(ngModel)]="msg" class="md-textarea form-control" rows="3"></textarea>
                     
                   </div>
   
-                  <button type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-md btn-block ml-0 mb-0" (click)="contact()">Submit</button>
   
                 </div>
               </div>
@@ -66,8 +66,26 @@
   
       </div>
 
+    </section>
+    </div>
+    <div class="review">
 
-
-
-
-  
+        <div class="b1">
+      <div class="body">
+        <br><br>
+        <h1>Reviews & Testimonials </h1>
+        <br><br>
+        </div>
+        <div class="rating">
+      
+              <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+              <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+              <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+              <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+              <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+        </div><br><br>
+      </div>
+<div class="button">
+    <button type="button" class="btn btn-primary" routerLink="review">Review</button>
+  </div>
+</div>

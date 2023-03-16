@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="title">
+        <h2> Order</h2>
+    </div>
+  <div class="d-flex">
+    <form action="" method="">
+      <label>
+        <span class="fname">First Name <span class="required">*</span></span>
+        <input type="text" [(ngModel)]="fname" name="fname">
+      </label>
+      <label>
+        <span class="lname">Last Name <span class="required">*</span></span>
+        <input type="text" [(ngModel)]="lname" name="lname">
+      </label>
+      <label>
+        <span>Phone Number</span>
+        <input type="text" [(ngModel)]="phone" name="cn">
+      </label>
+      <label>
+        <span>Address</span>
+        <input type="text" [(ngModel)]="addr" name="cn">
+      </label>
+       <label>
+        <span>Quantity<span class="required">*</span></span>
+        <select name="selection" [(ngModel)]="option">
+         
+          <option value="AFG">1</option>
+          <option value="AFB">2</option>
+          <option value="ALA">2</option>
+          <option value="ALB">3</option>
+          <option value="AFG">4</option>
+          <option value="ALA">5</option>
+          <option value="ALB">6</option>
+        </select>
+      <button type="button" (click)="payment()">Head to payment</button>

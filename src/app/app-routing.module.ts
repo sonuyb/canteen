@@ -8,7 +8,7 @@ import { SigninpageComponent } from './pages/signinpage/signinpage.component';
 import { SignuppageComponent } from './pages/signuppage/signuppage.component';
 import { SingleComponent } from './pages/singlepage/singlepage.component';
 import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
-import { SnacksComponent } from './pages/snacks/snacks.component';
+
 import { SnackspageComponent } from './pages/snackspage/snackspage.component';
 import { LunchpageComponent } from './pages/lunchpage/lunchpage.component';
 import { BiscuitspageComponent } from './pages/biscuitspage/biscuitspage.component';
@@ -16,11 +16,13 @@ import { PasterypageComponent } from './pages/pasterypage/pasterypage.component'
 import { CondinentalpageComponent } from './pages/condinentalpage/condinentalpage.component';
 import { IcecreamspageComponent } from './pages/icecreamspage/icecreamspage.component';
 import { ReviewComponent } from './pages/review/review.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { PaymentComponent } from './pages/payment/payment.component';
  
 
 const routes: Routes = [
   {
-    path:'',component:HomepageComponent
+    path:'',component:SigninpageComponent
   },
   {
     path:'home',component:HomepageComponent
@@ -72,7 +74,13 @@ const routes: Routes = [
   },
   {
     path:'review',component:ReviewComponent
-  }
+  },
+  {
+    path:'cart',component:CartComponent
+  },
+  {
+    path:'payment',component:PaymentComponent
+  },
 ];
 
 @NgModule({
